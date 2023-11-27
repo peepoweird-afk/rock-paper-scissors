@@ -10,9 +10,18 @@
         const itemChoice = ["Rock", "Paper", "Scissors"];
     
 
-        function getComputerChoice() {
+        function getComputerChoice(playOptions) { 
 
+            //get random index value
+
+            const randomIndex = Math.floor(Math.random() * playOptions.length);
+
+            const selection = playOptions[randomIndex];
+
+            return selection;
         }
+
+        console.log(getComputerChoice(itemChoice));
     </script>
     
 </body>
