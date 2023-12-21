@@ -20,10 +20,32 @@
         show a string declaring the winner of the round like "You lose, paper beats rock"
         
         
-        
+        How to force the player to keep putting input until its valid?
         
         
         */
+
+        function getPlayerChoice() {
+
+            const playerSelected = prompt("Please select between Rock, Paper, and Scissors.", "").trim().toLowerCase();
+
+
+            if (playerSelected != "rock" && playerSelected != "paper" && playerSelected != "scissors") {
+
+                alert("Unexpected input");
+
+            } else {
+
+                console.log(playerSelected);
+
+                alert("Expected input");
+
+                return playerSelected;
+            }
+
+
+        }
+
         function getComputerChoice(playOptions) { 
 
             //get random index value
@@ -35,29 +57,18 @@
             return selection;
         }
 
+
         const itemChoice = ["Rock", "Paper", "Scissors"];
 
         function playRound(playerSelection, computerSelection) {
 
-            playerSelection = prompt("Please select between Rock, Paper, and Scissors.", "").trim().toLowerCase();
 
-            if (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
-
-                alert("Unexpected input");
-
-            } else {
-
-                alert("Expected input");
-
-            }
-
-            console.log(playerSelection);
+           
 
 
 
         }
 
-        playRound()
     </script>
     
 </body>
