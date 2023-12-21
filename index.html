@@ -10,10 +10,6 @@
 
         /*PSEUDOCODE AREA
 
-        have the user input either rock, paper, scissors
-        make the input lowercase 
-        make any other input force the user to input again
-        call function that gets the computers choice
         read two variables, one for the players choice, one for the computers choice
         compare the two variables
         determine who beat who
@@ -56,12 +52,28 @@
 
             const weaponSelected = weaponOptions[randomIndex];
 
+            console.log(weaponSelected);
+
             return weaponSelected;
+
+
         }
 
 
-
         function playRound(playerSelection, computerSelection) {
+
+            playerSelection = getPlayerChoice();
+
+            computerSelection = getComputerChoice();
+
+            if ((playerSelection === "rock" && computerSelection === "Rock") ||
+            (playerSelection === "paper" && computerSelection === "Paper") ||
+            (playerSelection === "scissors" && computerSelection === "Scissors")) {
+
+                alert("Tie, try again");
+            }
+
+
 
 
            
@@ -69,6 +81,8 @@
 
 
         }
+
+        playRound()
 
     </script>
     
