@@ -28,14 +28,18 @@
 
             if (playerSelected != "rock" && playerSelected != "paper" && playerSelected != "scissors") {
 
-                alert("Unexpected input");
+                const playerSelectedDefault = "rock"
+
+                alert("Unexpected input, defaulted to Rock.");
+
+                console.log(playerSelectedDefault);
+
+                return playerSelectedDefault;
 
             } else {
 
                 console.log(playerSelected);
-
-                alert("Expected input");
-
+        
                 return playerSelected;
             }
 
@@ -71,6 +75,9 @@
             (playerSelection === "scissors" && computerSelection === "scissors")) {
 
                 alert(`Tie try again`);
+
+            //figure out how to make the player play again
+
             }
 
 
