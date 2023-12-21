@@ -46,19 +46,20 @@
 
         }
 
-        function getComputerChoice(playOptions) { 
+        function getComputerChoice() { 
+
+            const weaponOptions = ["Rock", "Paper", "Scissors"];
 
             //get random index value
 
-            const randomIndex = Math.floor(Math.random() * playOptions.length);
+            const randomIndex = Math.floor(Math.random() * weaponOptions.length);
 
-            const selection = playOptions[randomIndex];
+            const weaponSelected = weaponOptions[randomIndex];
 
-            return selection;
+            return weaponSelected;
         }
 
 
-        const itemChoice = ["Rock", "Paper", "Scissors"];
 
         function playRound(playerSelection, computerSelection) {
 
