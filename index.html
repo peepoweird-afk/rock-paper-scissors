@@ -44,7 +44,7 @@
 
         function getComputerChoice() { 
 
-            const weaponOptions = ["Rock", "Paper", "Scissors"];
+            const weaponOptions = ["rock", "paper", "scissors"];
 
             //get random index value
 
@@ -66,11 +66,11 @@
 
             computerSelection = getComputerChoice();
 
-            if ((playerSelection === "rock" && computerSelection === "Rock") ||
-            (playerSelection === "paper" && computerSelection === "Paper") ||
-            (playerSelection === "scissors" && computerSelection === "Scissors")) {
+            if ((playerSelection === "rock" && computerSelection === "rock") ||
+            (playerSelection === "paper" && computerSelection === "paper") ||
+            (playerSelection === "scissors" && computerSelection === "scissors")) {
 
-                alert("Tie, try again");
+                alert(`Tie try again`);
             }
 
 
