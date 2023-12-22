@@ -16,18 +16,11 @@
         show a string declaring the winner of the round like "You lose, paper beats rock"
         
             
-        Bug when player inputs null?
         */
 
         function getPlayerChoice() {
 
             const playerSelected = prompt("Please select between Rock, Paper, and Scissors.", "")?.trim().toLowerCase();
-
-            /*if(playerSelected === null) {
-
-            }
-            */
-
 
             if (playerSelected != "rock" && playerSelected != "paper" && playerSelected != "scissors") {
 
@@ -73,6 +66,8 @@
 
             computerSelection = getComputerChoice();
 
+            // account for ties 
+
             if ((playerSelection === "rock" && computerSelection === "rock") ||
             (playerSelection === "paper" && computerSelection === "paper") ||
             (playerSelection === "scissors" && computerSelection === "scissors")) {
@@ -80,9 +75,31 @@
                 alert(`Tie, ${playerSelection} ties with ${computerSelection}; try again`);
 
                 playRound();
+ 
+            } else if (playerSelection === "rock" && computerSelection === "paper") {
 
+                alert(`Defeat, ${computerSelection} beats ${playerSelection}!`);
+
+            } else if (playerSelection === "rock" && computerSelection === "scissors") {
+
+                alert(`Victory!!! ${playerSelection} beats ${computerSelection}!`);
+
+            } else if (playerSelection === "paper" && computerSelection === "rock") {
+
+                alert(`Victory!!! ${playerSelection} beats ${computerSelection}!`);
+
+            } else if (playerSelection === "paper" && computerSelection === "scissors") {
+
+                alert(`Defeat, ${computerSelection} beats ${playerSelection}!`);
+
+            } else if (playerSelection === "scissors" && computerSelection === "rock") {
+
+                alert(`Defeat, ${computerSelection} beats ${playerSelection}!`);
+            
+            } else if (playerSelection === "scissors" && computerSelection === "paper") {
+
+                alert(`Victory!!! ${playerSelection} beats ${computerSelection}!`);
             }
-
 
 
 
