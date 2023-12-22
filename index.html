@@ -15,15 +15,18 @@
         determine who beat who
         show a string declaring the winner of the round like "You lose, paper beats rock"
         
-        
-        How to force the player to keep putting input until its valid?
-        
-        
+            
+        Bug when player inputs null?
         */
 
         function getPlayerChoice() {
 
-            const playerSelected = prompt("Please select between Rock, Paper, and Scissors.", "").trim().toLowerCase();
+            const playerSelected = prompt("Please select between Rock, Paper, and Scissors.", "")?.trim().toLowerCase();
+
+            /*if(playerSelected === null) {
+
+            }
+            */
 
 
             if (playerSelected != "rock" && playerSelected != "paper" && playerSelected != "scissors") {
