@@ -66,6 +66,8 @@
 
             computerSelection = getComputerChoice();
 
+            let result;
+
             // account for ties 
 
             if ((playerSelection === "rock" && computerSelection === "rock") ||
@@ -78,27 +80,39 @@
  
             } else if (playerSelection === "rock" && computerSelection === "paper") {
 
+                result = "defeat";
+
                 alert(`Defeat, ${computerSelection} beats ${playerSelection}!`);
 
             } else if (playerSelection === "rock" && computerSelection === "scissors") {
 
-                alert(`Victory!!! ${playerSelection} beats ${computerSelection}!`);
+                result = "victory";
+
+                alert(`Victory, ${playerSelection} beats ${computerSelection}!!!`);
 
             } else if (playerSelection === "paper" && computerSelection === "rock") {
 
-                alert(`Victory!!! ${playerSelection} beats ${computerSelection}!`);
+                result = "victory";
+
+                alert(`Victory, ${playerSelection} beats ${computerSelection}!!!`);
 
             } else if (playerSelection === "paper" && computerSelection === "scissors") {
+
+                result = "defeat";
 
                 alert(`Defeat, ${computerSelection} beats ${playerSelection}!`);
 
             } else if (playerSelection === "scissors" && computerSelection === "rock") {
 
+                result = "defeat";
+
                 alert(`Defeat, ${computerSelection} beats ${playerSelection}!`);
             
             } else if (playerSelection === "scissors" && computerSelection === "paper") {
 
-                alert(`Victory!!! ${playerSelection} beats ${computerSelection}!`);
+                result = "victory";
+
+                alert(`Victory, ${playerSelection} beats ${computerSelection}!!!`);
             }
 
 
@@ -106,6 +120,14 @@
            
 
 
+
+        }
+
+        function game() {
+
+            let playerScore = 0;
+
+            let computerScore = 0;
 
         }
 
