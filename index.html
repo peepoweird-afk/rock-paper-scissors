@@ -115,11 +115,7 @@
                 alert(`Victory, ${playerSelection} beats ${computerSelection}!!!`);
             }
 
-
-
-           
-
-
+            return result;
 
         }
 
@@ -129,9 +125,26 @@
 
             let computerScore = 0;
 
+            for (let i = 0; i < 5; i++) {
+
+                if (playRound() == "victory") {
+
+                    playerScore++;
+
+                } else {
+
+                    computerScore++;
+                }
+
+                console.log(playerScore);
+                console.log(computerScore);
+
+            }
+
         }
 
-        playRound()
+        game()
+
 
     </script>
     
