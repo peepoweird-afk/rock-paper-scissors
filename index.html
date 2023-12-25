@@ -76,7 +76,8 @@
 
                 alert(`Tie, ${playerSelection} ties with ${computerSelection}; try again`);
 
-                playRound();
+                result = "tie";
+
  
             } else if (playerSelection === "rock" && computerSelection === "paper") {
 
@@ -131,9 +132,10 @@
 
                     playerScore++;
 
-                } else {
+                } else if (playRound() == "loss") {
 
                     computerScore++;
+
                 }
 
                 console.log(`Your score is ${playerScore}.`);
@@ -143,7 +145,7 @@
 
         }
 
-        game()
+        game();
 
 
     </script>
