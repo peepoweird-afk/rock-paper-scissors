@@ -8,15 +8,8 @@
 <body>
     <script>        
 
-        /*PSEUDOCODE AREA
-
-        read two variables, one for the players choice, one for the computers choice
-        compare the two variables
-        determine who beat who
-        show a string declaring the winner of the round like "You lose, paper beats rock"
+        game();
         
-            
-        */
 
         function getPlayerChoice() {
 
@@ -134,7 +127,7 @@
 
                     playerScore++;
 
-                } else if (roundResult == "loss") {
+                } else if (roundResult == "defeat") {
 
                     computerScore++;
 
@@ -145,9 +138,24 @@
 
             }
 
+            if (playerScore > computerScore) {
+
+                alert("CONGRATS, YOU WIN!!!");
+
+            } else if (computerScore < playerScore) {
+
+                alert("Sorry, you lost!");
+
+            } else {
+                
+                alert("Tied!");
+
+            }
+
+
         }
 
-        game();
+
 
 
     </script>
