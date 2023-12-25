@@ -28,13 +28,13 @@
 
                 alert("Unexpected input, defaulted to Rock.");
 
-                console.log(playerSelectedDefault);
+                console.log(`You picked ${playerSelectedDefault}.`);
 
                 return playerSelectedDefault;
 
             } else {
 
-                console.log(playerSelected);
+                console.log(`You picked ${playerSelected}.`;
         
                 return playerSelected;
             }
@@ -52,7 +52,7 @@
 
             const weaponSelected = weaponOptions[randomIndex];
 
-            console.log(weaponSelected);
+            console.log(`The computer picked ${weaponSelected}.`);
 
             return weaponSelected;
 
@@ -136,8 +136,8 @@
                     computerScore++;
                 }
 
-                console.log(playerScore);
-                console.log(computerScore);
+                console.log(`Your score is ${playerScore}.`);
+                console.log(`The computer's score is ${computerScore}.`);
 
             }
 
