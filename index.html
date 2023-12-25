@@ -128,11 +128,13 @@
 
             for (let i = 0; i < 5; i++) {
 
-                if (playRound() == "victory") {
+                let roundResult = playRound();
+
+                if (roundResult == "victory") {
 
                     playerScore++;
 
-                } else if (playRound() == "loss") {
+                } else if (roundResult == "loss") {
 
                     computerScore++;
 
